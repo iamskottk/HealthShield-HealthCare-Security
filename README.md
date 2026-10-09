@@ -1,6 +1,6 @@
 # HealthShield — Healthcare Security Operations Platform
 
-HealthShield is a healthcare-focused Security Operations Platform designed to collect security telemetry, correlate related events, identify suspicious activity, generate risk-based incidents, and support SOC analyst investigation.
+HealthShield is a healthcare oriented Security Operations Platform designed to collect security telemetry, correlate related events, identify suspicious activity, generate risk based incidents, and support SOC analyst investigation.
 
 > **Know who did what, when it happened, where it happened, and why it matters.**
 
@@ -10,7 +10,7 @@ HealthShield is a healthcare-focused Security Operations Platform designed to co
 
 ## What HealthShield Demonstrates
 
-HealthShield was built as a local security operations lab using PowerShell and Windows-based security telemetry.
+HealthShield was built as a local security operations lab using PowerShell and Windows based security telemetry.
 
 The platform brings multiple security domains into one incident workflow:
 
@@ -139,7 +139,7 @@ PATIENT_VIEW
 PATIENT_EXPORT
 ```
 
-The sequence demonstrates how repeated authentication failures followed by successful authentication and sensitive patient-data activity can be correlated into a higher-confidence security incident.
+The sequence demonstrates how repeated authentication failures followed by successful authentication and sensitive patient-data activity can be correlated into a higher confidence security incident.
 
 The generated incident contains an alert ID, severity, risk score, actor, endpoint, source information, event sequence, timeline and incident status.
 
@@ -604,15 +604,30 @@ This project demonstrates practical ability in:
 * Incident documentation
 * Controlled security testing
 
-The project also demonstrates the ability to move from individual security events to an analyst-oriented incident narrative.
+The project also demonstrates the ability to move from individual security events to an analyst focused incident narrative.
 
 ---
+
+# Latest Release Candidate Validation
+
+On 9 October 2026, the local release demonstration was checked with the following results:
+
+| Check | Result |
+| --- | --- |
+| Release folder and ZIP archive created | PASS |
+| Required startup, check, collector, README and dashboard files present in the release folder | PASS |
+| Dashboard opened in the browser | PASS |
+| Local HealthShield API responded with status `ONLINE` | PASS |
+| Synthetic web security event submitted through the release copy's web connector | PASS |
+| API returned a `Web Application Threat Activity` alert with severity `HIGH`, risk score `12`, actor `HealthShieldFreshTest`, and status `NEW` | PASS |
+
+The web event was synthetic training data. This validates the observed local demonstration path; it does not establish that every detector has been tested or that the release runs independently of any other local HealthShield process.
 
 # Project Limitations
 
 HealthShield is a local cybersecurity laboratory and portfolio project.
 
-It should not be represented as a production-ready hospital SIEM/SOC platform.
+It should not be represented as a production ready hospital SIEM/SOC platform.
 
 A production deployment would require additional controls including:
 
